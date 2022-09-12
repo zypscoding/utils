@@ -1,0 +1,40 @@
+{
+  "name": "@ekkoling/utils",
+  "version": "1.0.0",
+  "description": "utils",
+  "main": "lib/bundle.cjs.js",
+  "jsnext:main": "lib/bundle.esm.js",
+  "module": "lib/bundle.esm.js",
+  "browser": "lib/bundle.browser.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "dev": "npx rollup -wc rollup.config.dev.js",
+    "build": "npx rollup -c rollup.config.js && npm run build:types",
+    "build:types": "npx tsc"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "zp",
+  "license": "ISC",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^2.0.1",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
