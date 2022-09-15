@@ -1,3 +1,5 @@
-import tsUtils from './src/index'
-export default tsUtils
+const utils = require('./src/utils')
 
+module.exports = {
+    ...utils
+}

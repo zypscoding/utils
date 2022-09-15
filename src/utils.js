@@ -109,17 +109,6 @@ const getCookies = () =>
     .map((item) => item.split("="))
     .reduce((acc, [k, v]) => (acc[k.trim().replace('"', "")] = v) && acc, {});
 
-//清除所有 cookie
-const clearCookies = () =>
-  document.cookie
-    .split(";")
-    .forEach(
-      (c) =>
-        (document.cookie = c
-          .splace(/^+/, "")
-          .replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`))
-    );
-
 //将 URL 参数转换为对象
 const getUrlParams = (query) =>
   Array.from(new URLSearchParams(query)).reduce(
@@ -159,7 +148,6 @@ module.exports = {
   getSelectedText,
   goBack,
   getCookies,
-  clearCookies,
   getUrlParams,
   arrayToObject,
 };
