@@ -1,6 +1,6 @@
 {
   "name": "@ekkoling/utils",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "utils",
   "main": "index.js",
   "jsnext:main": "lib/bundle.esm.js",
@@ -23,6 +23,7 @@
   "dependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-typescript": "^8.5.0",
+    "react": "^17.0.2",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "tslib": "^2.4.0",

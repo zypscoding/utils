@@ -1,0 +1,10 @@
+.WaterMark {
+  position: absolute;
+  top: 0;
+  bottom: 0; // 整体覆盖
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483647;
+  pointer-events: none; // 对鼠标穿透
+}
